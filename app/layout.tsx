@@ -16,6 +16,11 @@ const myFont = localFont({
       weight: "400",
       style: "normal",
     },
+    {
+      path: "../public/fonts/Legothick.ttf",
+      weight: "700",
+      style: "normal",
+    },
   ],
   display: "swap",
   variable: "--font-custom",
