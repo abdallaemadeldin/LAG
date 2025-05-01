@@ -18,9 +18,9 @@ import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/", icon: Home },
-  { name: "About", href: "/about", icon: Building2 },
-  { name: "Services", href: "/services", icon: Package2 },
-  { name: "Portfolio", href: "/portfolio", icon: Building2 },
+  // { name: "About", href: "/about", icon: Building2 },
+  // { name: "Services", href: "/services", icon: Package2 },
+  // { name: "Portfolio", href: "/portfolio", icon: Building2 },
   { name: "Contact", href: "/contact", icon: Phone },
 ];
 
@@ -40,11 +40,13 @@ export function NavBar() {
                 src="/logo.png"
                 width={1000}
                 height={1000}
-                className="w-20 h-auto"
+                className="w-28 h-auto me-6"
               />
             </Link>
           </div>
         </div>
+
+        <p className="font-semibold">We Fill The GAP</p>
 
         <button
           className="lg:hidden p-2 hover:bg-cta-hover/80 rounded-md transition-colors"
@@ -102,10 +104,8 @@ export function NavBar() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "lg:hidden fixed inset-0 top-16 bg-background transition-all duration-300 transform z-50",
-          isMenuOpen
-            ? "translate-x-0 opacity-100"
-            : "translate-x-full opacity-0"
+          "lg:hidden absolute inset-0 top-16 bg-background transition-all duration-300 transform z-50 ",
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
         <div className="container px-6 py-8 space-y-4 bg-background">

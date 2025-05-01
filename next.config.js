@@ -5,7 +5,16 @@ const nextConfig = {
   },
   images: { unoptimized: true },
   experimental: {
-    optimizePackageImports: ["lucide-react"]
+    optimizePackageImports: ["lucide-react"],
+  },
+  async redirects() {
+    return [
+      {
+        source: "/dashboard",
+        destination: "/",
+        permanent: false,
+      },
+    ];
   },
   webpack: (config, { isServer }) => {
     config.experiments = {
@@ -13,16 +22,16 @@ const nextConfig = {
       asyncWebAssembly: false,
       topLevelAwait: true,
     };
-    
+
     if (!isServer) {
       config.resolve.fallback = {
         ...config.resolve.fallback,
-        "fs": false,
+        fs: false,
       };
     }
-    
+
     return config;
-  }
+  },
 };
 
 module.exports = nextConfig;

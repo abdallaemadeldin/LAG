@@ -8,12 +8,12 @@ import { Footer } from "@/components/footer";
 const myFont = localFont({
   src: [
     {
-      path: "../public/fonts/LEGO.ttf",
+      path: "../public/fonts/Chewy-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/Legothick.ttf",
+      path: "../public/fonts/MonsterFriendFore.otf",
       weight: "700",
       style: "normal",
     },

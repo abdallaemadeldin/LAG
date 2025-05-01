@@ -8,10 +8,6 @@ import {
   Truck,
   Wrench,
   Palette,
-  Instagram,
-  Facebook,
-  Twitter,
-  Linkedin,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,80 +22,88 @@ export default function Home() {
       </div>
       <section className="container mx-auto px-6 min-h-screen flex items-center">
         <div className="max-w-2xl space-y-8">
-          <div className="space-y-4">
+          <div className="space-y-4 mb-8">
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-accent rounded shadow-lg transform -rotate-12" />
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-                We fill the gap
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold">
+                Your Event,
+                <br />
+                Our Playground.
               </h1>
               <div className="w-16 h-16 bg-[#191970] rounded shadow-lg transform rotate-12" />
             </div>
             <p className="text-xl text-muted-foreground">
-              Transform your events into unforgettable experiences with our
-              custom LEGO solutions.
+              Big ideas, crazy good execution. LAG Agency takes care of every
+              wild, wonderful, chaotic detail — so you don’t have to.
             </p>
           </div>
 
-          <Button
-            size="lg"
-            className="text-lg px-8 py-6 rounded-xl bg-accent hover:bg-cta-hover hover:text-accent text-[#0A0F2C]"
-          >
-            Let&apos;s Build Your Event
-          </Button>
+          <Link href="/contact">
+            <Button
+              size="lg"
+              className="text-lg px-8 py-6 rounded-xl bg-accent hover:bg-cta-hover hover:text-accent text-[#0A0F2C]"
+            >
+              Let&apos;s Build Your Event
+            </Button>
+          </Link>
         </div>
       </section>
 
       <div className="relative">
         <div className="absolute inset-x-0 -top-4 h-8 bg-gradient-to-r from-accent via-[#191970] to-primary transform -skew-y-3" />
-        <section className="bg-secondary/50 pt-24 pb-16">
+        <section className="bg-secondary/50 pt-24 pb-16" id="about">
           <div className="container px-6 mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-4">
-              <h2 className="text-3xl font-bold">
-                Building Dreams, One Brick at a Time
-              </h2>
+              <h2 className="text-3xl font-bold">Serious About Fun.</h2>
               <p className="text-lg text-muted-foreground">
-                LAG Agency specializes in creating extraordinary LEGO-themed
-                experiences that inspire creativity and bring people together.
-                We transform ordinary spaces into interactive wonderlands where
-                imagination knows no bounds.
+                At LAG Agency, we’re in the business of making it happen. From
+                pop-ups to galas, we turn your dream decks into real events.
               </p>
             </div>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-background rounded-xl p-6 shadow-lg group hover:scale-105 transition-transform">
-                <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform">
-                  <Trophy className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">
-                  Award-Winning Designs
+            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+              <div className="bg-[#191970] rounded-xl p-6 shadow-lg group hover:scale-105 transition-transform">
+                <h3 className="font-semibold text-base mb-2">
+                  All the Goods. None of the Drama.
                 </h3>
                 <p className="text-muted-foreground">
-                  Recognized for our innovative LEGO installations and unique
-                  event concepts.
+                  Crazy creative ideas? Killer themes? Budgets that make sense.
                 </p>
               </div>
 
-              <div className="bg-background rounded-xl p-6 shadow-lg group hover:scale-105 transition-transform">
-                <div className="w-12 h-12 bg-[#191970] rounded-lg flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">Expert Team</h3>
+              <div className="bg-[#191970] rounded-xl p-6 shadow-lg group hover:scale-105 transition-transform">
+                <h3 className="font-semibold text-base mb-2">
+                  Event Planning & Brainstorming
+                </h3>
                 <p className="text-muted-foreground">
-                  Passionate LEGO masters dedicated to bringing your vision to
-                  life.
+                  Creative ideas, killer themes, realistic budgets. life.
                 </p>
               </div>
 
-              <div className="bg-background rounded-xl p-6 shadow-lg group hover:scale-105 transition-transform">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform">
-                  <Rocket className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="font-semibold text-lg mb-2">
-                  Limitless Creativity
+              <div className="bg-[#191970] rounded-xl p-6 shadow-lg group hover:scale-105 transition-transform">
+                <h3 className="font-semibold text-base mb-2">
+                  Venue Hunt & Setup
                 </h3>
                 <p className="text-muted-foreground">
-                  From corporate events to birthday parties, we create
-                  unforgettable experiences.
+                  Find the perfect venue, setup, decor, and staging.
+                </p>
+              </div>
+
+              <div className="bg-[#191970] rounded-xl p-6 shadow-lg group hover:scale-105 transition-transform">
+                <h3 className="font-semibold text-base mb-2">
+                  Logistics Wizardry
+                </h3>
+                <p className="text-muted-foreground">
+                  Scheduling, vendor management, people-moving magic.
+                </p>
+              </div>
+
+              <div className="bg-[#191970] rounded-xl p-6 shadow-lg group hover:scale-105 transition-transform">
+                <h3 className="font-semibold text-base mb-2">
+                  Production & Event Day Hustle
+                </h3>
+                <p className="text-muted-foreground">
+                  Tech setup, emergency fixes, event execution.
                 </p>
               </div>
             </div>
@@ -108,7 +112,7 @@ export default function Home() {
         <div className="absolute inset-x-0 -bottom-4 h-8 bg-gradient-to-r from-primary via-[#191970] to-accent transform skew-y-3" />
       </div>
 
-      <section className="py-24 container px-6 mx-auto">
+      {/* <section className="py-24 container px-6 mx-auto">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
           <h2 className="text-3xl font-bold">Our Building Blocks</h2>
           <p className="text-lg text-muted-foreground">
@@ -162,103 +166,153 @@ export default function Home() {
 
           <div className="group relative">
             <div className="absolute inset-0 bg-gradient-to-b from-secondary/20 to-transparent rounded-xl -rotate-6 scale-[0.98] opacity-0 group-hover:opacity-100 transition-all duration-300" />
-            <div className="bg-secondary p-6 rounded-xl shadow-lg relative">
+            <div className="bg-cta-hover p-6 rounded-xl shadow-lg relative">
               <div className="bg-secondary/70 w-12 h-3 absolute -top-1.5 left-8 rounded" />
               <Wrench className="w-8 h-8 mb-4 text-white" />
               <h3 className="font-semibold text-xl mb-2 text-white">Support</h3>
               <p className="text-white/80">
-                On-site management and technical assistance.
+                On-site management and dedicated technical support to ensure
+                efficient operations.
               </p>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="py-24 bg-secondary/50">
+      <section className="py-24 bg-secondary/50 overflow-hidden" id="clients">
         <div className="container px-6 mx-auto">
           <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
-            <h2 className="text-3xl font-bold">Our Masterpieces</h2>
+            <h2 className="text-3xl font-bold">Our Experts</h2>
             <p className="text-lg text-muted-foreground">
-              Every event is a unique creation, built brick by brick with
-              passion and precision.
+              Our team of experts has successfully managed and overseen numerous
+              projects, delivering exceptional results through proven experience
+              and professional dedication.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-yellow-400/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 z-10">
-                <div className="text-black">
-                  <h3 className="font-bold text-xl mb-2">
-                    Tech Conference 2024
-                  </h3>
-                  <p className="text-black/80">
-                    Interactive LEGO robotics display and team building workshop
-                  </p>
+          <div className="relative">
+            <div className="flex gap-8 animate-slide">
+              {[...Array(2)].map((_, i) => (
+                <div key={i} className="flex gap-8 items-center">
+                  {[
+                    { name: "Tech Corp", color: "#FFD700" },
+                    { name: "Innovate Inc", color: "#191970" },
+                    { name: "Build Co", color: "#0A0F2C" },
+                    { name: "Create Labs", color: "#FFD700" },
+                    { name: "Design Studio", color: "#191970" },
+                    { name: "Future Tech", color: "#0A0F2C" },
+                  ].map((company) => (
+                    <div
+                      key={company.name}
+                      className="flex-shrink-0 w-32 h-32 rounded-xl flex items-center justify-center p-4 bg-background/80 backdrop-blur-sm shadow-lg group hover:scale-105 transition-transform"
+                    >
+                      <div
+                        className="w-full h-full rounded-lg"
+                        style={{ backgroundColor: company.color }}
+                      />
+                    </div>
+                  ))}
                 </div>
-              </div>
-              <div className="aspect-[4/3] relative rounded-xl overflow-hidden">
-                <Image
-                  src="https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg"
-                  alt="Tech Conference LEGO Display"
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent" />
-                <div className="absolute -top-2 left-4 w-8 h-8 bg-accent rounded-lg transform rotate-45" />
-                <div className="absolute -top-2 right-8 w-6 h-6 bg-[#191970] rounded-lg transform -rotate-12" />
-              </div>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-red-400/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 z-10">
-                <div className="text-black">
-                  <h3 className="font-bold text-xl mb-2">Children's Museum</h3>
-                  <p className="text-black/80">
-                    Giant LEGO city installation with interactive play zones
-                  </p>
-                </div>
-              </div>
-              <div className="aspect-[4/3] relative rounded-xl overflow-hidden">
-                <Image
-                  src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg"
-                  alt="Children's Museum LEGO City"
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent" />
-                <div className="absolute -top-2 left-8 w-6 h-6 bg-primary rounded-lg transform -rotate-12" />
-                <div className="absolute -top-2 right-4 w-8 h-8 bg-[#191970] rounded-lg transform rotate-45" />
-              </div>
-            </div>
-
-            <div className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-400/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 z-10">
-                <div className="text-black">
-                  <h3 className="font-bold text-xl mb-2">
-                    Corporate Team Building
-                  </h3>
-                  <p className="text-black/80">
-                    Custom LEGO challenge events for Fortune 500 companies
-                  </p>
-                </div>
-              </div>
-              <div className="aspect-[4/3] relative rounded-xl overflow-hidden">
-                <Image
-                  src="https://t3.ftcdn.net/jpg/01/94/35/50/360_F_194355042_6zWDHJjet3sUpRYdsKN9KOiB0Pbeb9SX.jpg"
-                  alt="Corporate Team Building Event"
-                  fill
-                  className="object-cover transform group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent" />
-                <div className="absolute -top-2 left-6 w-8 h-8 bg-secondary rounded-lg transform rotate-45" />
-                <div className="absolute -top-2 right-6 w-6 h-6 bg-accent rounded-lg transform -rotate-12" />
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       <div className="relative">
+        <div className="absolute inset-x-0 -top-4 h-8 bg-gradient-to-r from-accent via-[#191970] to-primary transform -skew-y-3" />
+        <section className="py-24 bg-secondary/50" id="projects">
+          <div className="container px-6 mx-auto">
+            <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
+              <h2 className="text-3xl font-bold">
+                Proof We Know What We’re Doing.
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Brand launches, retreats, galas, secret pop-ups, wild private
+                parties.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-yellow-400/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 z-10">
+                  <div className="text-black">
+                    <h3 className="font-bold text-xl mb-2">
+                      Tech Conference 2024
+                    </h3>
+                    <p className="text-black/80">
+                      Interactive LEGO robotics display and team building
+                      workshop
+                    </p>
+                  </div>
+                </div>
+                <div className="aspect-[4/3] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg"
+                    alt="Tech Conference LEGO Display"
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent" />
+                  <div className="absolute -top-2 left-4 w-8 h-8 bg-accent rounded-lg transform rotate-45" />
+                  <div className="absolute -top-2 right-8 w-6 h-6 bg-[#191970] rounded-lg transform -rotate-12" />
+                </div>
+              </div>
+
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-red-400/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 z-10">
+                  <div className="text-black">
+                    <h3 className="font-bold text-xl mb-2">
+                      Children's Museum
+                    </h3>
+                    <p className="text-black/80">
+                      Giant LEGO city installation with interactive play zones
+                    </p>
+                  </div>
+                </div>
+                <div className="aspect-[4/3] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="https://images.pexels.com/photos/163036/mario-luigi-yoschi-figures-163036.jpeg"
+                    alt="Children's Museum LEGO City"
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent" />
+                  <div className="absolute -top-2 left-8 w-6 h-6 bg-primary rounded-lg transform -rotate-12" />
+                  <div className="absolute -top-2 right-4 w-8 h-8 bg-[#191970] rounded-lg transform rotate-45" />
+                </div>
+              </div>
+
+              <div className="group relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-400/90 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-6 z-10">
+                  <div className="text-black">
+                    <h3 className="font-bold text-xl mb-2">
+                      Corporate Team Building
+                    </h3>
+                    <p className="text-black/80">
+                      Custom LEGO challenge events for Fortune 500 companies
+                    </p>
+                  </div>
+                </div>
+                <div className="aspect-[4/3] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="https://t3.ftcdn.net/jpg/01/94/35/50/360_F_194355042_6zWDHJjet3sUpRYdsKN9KOiB0Pbeb9SX.jpg"
+                    alt="Corporate Team Building Event"
+                    fill
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/50 to-transparent" />
+                  <div className="absolute -top-2 left-6 w-8 h-8 bg-secondary rounded-lg transform rotate-45" />
+                  <div className="absolute -top-2 right-6 w-6 h-6 bg-accent rounded-lg transform -rotate-12" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="absolute inset-x-0 -bottom-4 h-8 bg-gradient-to-r from-primary via-[#191970] to-accent transform skew-y-3" />
+      </div>
+
+      {/* <div className="relative">
         <div className="absolute inset-x-0 -top-4 h-8 bg-gradient-to-r from-accent via-[#191970] to-primary transform -skew-y-3" />
         <section className="py-24 bg-background">
           <div className="container px-6 mx-auto">
@@ -342,7 +396,7 @@ export default function Home() {
           </div>
         </section>
         <div className="absolute inset-x-0 -bottom-4 h-8 bg-gradient-to-r from-primary via-[#191970] to-accent transform skew-y-3" />
-      </div>
+      </div> */}
 
       <section className="py-24 container px-6 mx-auto">
         <div className="max-w-3xl mx-auto text-center space-y-4 mb-16">
@@ -390,7 +444,7 @@ export default function Home() {
 
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5 text-primary" />
+                  <Calendar className="w-5 h-5 text-accent" />
                   <label className="text-sm font-medium">Event Date</label>
                 </div>
                 <input

@@ -1,6 +1,16 @@
-import { Button } from '@/components/ui/button';
-import { Building2, Mail, MapPin, Phone, MessageSquare, Send, Clock } from 'lucide-react';
-import Image from 'next/image';
+import { Button } from "@/components/ui/button";
+import {
+  Mail,
+  MapPin,
+  Phone,
+  MessageSquare,
+  Clock,
+  Users,
+  Rocket,
+  Calendar,
+  Blocks,
+} from "lucide-react";
+import Image from "next/image";
 
 export default function ContactPage() {
   return (
@@ -11,7 +21,7 @@ export default function ContactPage() {
         <div className="absolute top-1/3 right-32 w-32 h-32 bg-red-400 rounded-2xl -rotate-12 opacity-20" />
         <div className="absolute bottom-1/4 -right-16 w-48 h-48 bg-blue-400 rounded-2xl rotate-45 opacity-20" />
       </div>
-      
+
       <section className="pt-32 pb-24 container px-6 mx-auto">
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <div className="flex justify-center gap-6 mb-8">
@@ -48,40 +58,43 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <h2 className="text-3xl font-bold">Get in Touch</h2>
                 <p className="text-lg text-muted-foreground">
-                  Whether you're planning an event, have a question, or just want to say hello, we're here to help!
+                  Whether you're planning an event, have a question, or just
+                  want to say hello, we're here to help!
                 </p>
               </div>
 
               <div className="space-y-6">
                 {[
-                  {
-                    icon: MapPin,
-                    title: 'Visit Us',
-                    content: '123 LEGO Lane, Brick City, BC 12345',
-                    color: 'yellow',
-                  },
+                  // {
+                  //   icon: MapPin,
+                  //   title: "Visit Us",
+                  //   content: "123 LEGO Lane, Brick City, BC 12345",
+                  //   color: "yellow",
+                  // },
                   {
                     icon: Phone,
-                    title: 'Call Us',
-                    content: '+1 (555) 123-4567',
-                    color: 'red',
+                    title: "Call Us",
+                    content: "+971585334758",
+                    color: "#FFD700",
                   },
                   {
                     icon: Mail,
-                    title: 'Email Us',
-                    content: 'hello@lagagency.com',
-                    color: 'blue',
+                    title: "Email Us",
+                    content: "asan@lag.agency",
+                    color: "#121212",
                   },
                   {
                     icon: Clock,
-                    title: 'Business Hours',
-                    content: 'Monday - Friday: 9am - 6pm',
-                    color: 'green',
+                    title: "Business Hours",
+                    content: "Monday - Friday: 9am - 6pm",
+                    color: "#191970",
                   },
                 ].map((item) => (
                   <div key={item.title} className="flex items-start gap-4">
-                    <div className={`w-12 h-12 rounded-xl bg-${item.color}-400 flex items-center justify-center flex-shrink-0`}>
-                      <item.icon className={`w-6 h-6 text-${item.color}-900`} />
+                    <div
+                      className={`w-12 h-12 rounded-xl bg-[${item.color}] flex items-center justify-center flex-shrink-0`}
+                    >
+                      <item.icon className={`w-6 h-6 text-white`} />
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">{item.title}</h3>
@@ -106,52 +119,66 @@ export default function ContactPage() {
             </div>
 
             <div className="relative">
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-yellow-400 rounded-2xl transform rotate-12 -z-10" />
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-red-400 rounded-2xl transform -rotate-12 -z-10" />
-              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-blue-400 rounded-2xl transform rotate-45 -z-10" />
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent rounded-2xl transform rotate-12 -z-10" />
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-[#191970] rounded-2xl transform -rotate-12 -z-10" />
+              <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-primary rounded-2xl transform rotate-45 -z-10" />
 
               <form className="bg-cta-hover rounded-xl p-8 shadow-lg relative space-y-6">
-                <div className="absolute -top-3 left-12 w-16 h-4 bg-yellow-500 rounded" />
-                <div className="absolute -top-3 right-12 w-16 h-4 bg-red-500 rounded" />
+                <div className="absolute -top-3 left-12 w-16 h-4 bg-accent/70 rounded" />
+                <div className="absolute -top-3 right-12 w-16 h-4 bg-[#191970]/70 rounded" />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Name</label>
+                    <div className="flex items-center gap-2">
+                      <Users className="w-5 h-5 text-accent" />
+                      <label className="text-sm font-medium">Name</label>
+                    </div>
                     <input
                       type="text"
                       className="w-full px-4 py-2 rounded-lg border border-input bg-background"
                       placeholder="John Doe"
                     />
                   </div>
+
                   <div className="space-y-2">
-                    <label className="text-sm font-medium">Email</label>
+                    <div className="flex items-center gap-2">
+                      <Rocket className="w-5 h-5 text-accent" />
+                      <label className="text-sm font-medium">Company</label>
+                    </div>
                     <input
-                      type="email"
+                      type="text"
                       className="w-full px-4 py-2 rounded-lg border border-input bg-background"
-                      placeholder="john@example.com"
+                      placeholder="Awesome Inc."
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Subject</label>
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-5 h-5 text-accent" />
+                    <label className="text-sm font-medium">Event Date</label>
+                  </div>
                   <input
-                    type="text"
+                    type="date"
                     className="w-full px-4 py-2 rounded-lg border border-input bg-background"
-                    placeholder="How can we help?"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Message</label>
+                  <div className="flex items-center gap-2">
+                    <Blocks className="w-5 h-5 text-accent" />
+                    <label className="text-sm font-medium">Message</label>
+                  </div>
                   <textarea
                     className="w-full px-4 py-2 rounded-lg border border-input bg-background min-h-[120px]"
-                    placeholder="Tell us about your project..."
+                    placeholder="Tell us about your dream event..."
                   />
                 </div>
 
-                <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black">
-                  <Send className="w-4 h-4 mr-2" />
+                <Button
+                  size="lg"
+                  className="w-full bg-accent hover:bg-secondary text-cta-hover hover:text-white"
+                >
                   Send Message
                 </Button>
               </form>
@@ -169,23 +196,28 @@ export default function ContactPage() {
               <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-blue-400 rounded" />
 
               <div className="text-center space-y-6">
-                <h2 className="text-3xl font-bold">Follow Our Building Journey!</h2>
+                <h2 className="text-3xl font-bold">
+                  Follow Our Building Journey!
+                </h2>
                 <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                  Stay updated with our latest projects, events, and behind-the-scenes moments.
+                  Stay updated with our latest projects, events, and
+                  behind-the-scenes moments.
                 </p>
 
                 <div className="flex justify-center gap-6">
                   {[
-                    { color: 'yellow', label: 'Instagram' },
-                    { color: 'red', label: 'Facebook' },
-                    { color: 'blue', label: 'Twitter' },
+                    { color: "yellow", label: "Instagram" },
+                    { color: "red", label: "Facebook" },
+                    { color: "blue", label: "Twitter" },
                   ].map((social) => (
                     <div
                       key={social.label}
                       className={`w-16 h-16 bg-${social.color}-400 rounded-xl flex items-center justify-center transform hover:rotate-6 transition-transform cursor-pointer`}
                     >
                       <span className="sr-only">{social.label}</span>
-                      <div className={`w-8 h-8 bg-${social.color}-500 rounded-lg transform rotate-45`} />
+                      <div
+                        className={`w-8 h-8 bg-${social.color}-500 rounded-lg transform rotate-45`}
+                      />
                     </div>
                   ))}
                 </div>
